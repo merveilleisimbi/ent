@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeadBloom | Stock Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">🌸 BeadBloom</div>
+        <p>Bracelet Stock Management System</p>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome to BeadBloom!</h1>
+        <p>Manage your bracelet materials, monitor stock
+           and never run out of supplies unexpectedly.</p>
+    </section>
+
+    <main>
+
+        <section class="dashboard">
+            <div class="stat full">
+                <h3>Full Stock</h3>
+                <h2 id="fullCount">0</h2>
+            </div>
+
+            <div class="stat medium">
+                <h3>Medium Stock</h3>
+                <h2 id="mediumCount">0</h2>
+            </div>
+
+            <div class="stat out">
+                <h3>Out of Stock</h3>
+                <h2 id="outCount">0</h2>
+            </div>
+        </section>
+
+        <section class="container">
+
+            <div class="form-section">
+                <h2>Add New Item 📿</h2>
+
+                <form id="stockForm">
+
+                    <label>Item Name</label>
+                    <input type="text" id="itemName"
+                        placeholder="e.g. Pink beads" required>
+
+                    <label>Category</label>
+                    <select id="category">
+                        <option>Beads</option>
+                        <option>Strings</option>
+                        <option>Charms</option>
+                        <option>Tools</option>
+                        <option>Finished Bracelets</option>
+                        <option>Other</option>
+                    </select>
+
+                    <label>Quantity Available</label>
+                    <input type="number" id="quantity"
+                        min="0" step="1" required>
+
+                    <label>Low Stock Level</label>
+                    <input type="number" id="threshold"
+                        min="1" value="10" required>
+
+                    <button type="submit">Add Item +</button>
+
+                </form>
+            </div>
+
+            <div class="inventory-section">
+                <h2>Our Inventory 📦</h2>
+
+                <input type="search" id="search"
+                    placeholder="Search for an item...">
+
+                <div id="inventory"></div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 BeadBloom | Created for our school bracelet business 💗</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
